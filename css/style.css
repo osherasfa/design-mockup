@@ -22,6 +22,9 @@ h1, p{ margin: 0; }
 .menu{
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5em;
 }
 
 
@@ -30,20 +33,20 @@ h1, p{ margin: 0; }
   margin: 0;
   padding: 0;
   overflow: hidden;
+  flex-grow: 1;
 }
 
 .menu > ul > li{
   float: left;
-  margin-inline: 1.25em;
+  margin-inline: .5em;
 }
 
 .menu > button{
+  display: none;
   color: #E4E4DE;
   background-color: #335ECC;
   font-family: inherit;
-
-  margin-left: auto;
-  padding: .5em 1em;
+  padding: .7em 1.5em;
   border: none;
   border-radius: 1.125rem;
 }
@@ -55,11 +58,9 @@ h1, p{ margin: 0; }
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: column;
-
 }
 
-.hero div{ }
-.hero h1{ font-size: 5rem; }
+.hero h1{ font-size: 3rem; }
 .hero > div > p{ font-size: 1.55rem; }
 .icons img{ width: 30px; }
 
@@ -74,9 +75,13 @@ h1, p{ margin: 0; }
 
 .hero > img{
   border-radius: 1.125rem;
-  /* border: .2rem solid #212121; */
   width: 100%;
   overflow: auto;
+}
+
+@media screen and (min-width: 600px) {
+  .hero h1{ font-size: 5.5rem; }
+  .menu > button{ display: block; }
 }
 
 @media screen and (min-width: 900px) {
